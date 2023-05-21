@@ -2,11 +2,11 @@ const noteRoute = require("express").Router();
 const { v4: uuidv4 } = require('uuid');
 const { readAndAppend, readFromFile, readAndRemove } = require('../helpers/fsUtils');
 
-noteRoute.get('/api/notes', (req, res) =>
+noteRoute.get('/notes', (req, res) =>
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
-noteRoute.post('/api/notes', (req, res) => {
+noteRoute.post('/notes', (req, res) => {
     // Destructuring assignment for the items in req.body
     const { title, text } = req.body;
   
