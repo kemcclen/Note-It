@@ -26,7 +26,7 @@ When Note It is opened, the user is presented with a landing page with a link to
 
 ## Links: 
 Repository: https://github.com/kemcclen/Note-It
-Deployed: 
+Deployed: https://note-it-kemcclen.herokuapp.com/
 
 ## License:
 Licensed under the [MIT License](https://opensource.org/license/mit/).
