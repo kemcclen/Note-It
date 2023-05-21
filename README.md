@@ -25,8 +25,8 @@ When Note It is opened, the user is presented with a landing page with a link to
 - Source Code: a-nyx on GitLab
 
 ## Links: 
-Repository: https://github.com/kemcclen/Note-It
-Deployed: https://note-it-kemcclen.herokuapp.com/
+- Repository: https://github.com/kemcclen/Note-It
+- Deployed: https://note-it-kemcclen.herokuapp.com/
 
 ## License:
 Licensed under the [MIT License](https://opensource.org/license/mit/).
