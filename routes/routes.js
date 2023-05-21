@@ -2,17 +2,17 @@ const noteRoute = require("express").Router();
 const { v4: uuidv4 } = require('uuid');
 const { readAndAppend, readFromFile, readAndRemove } = require('../helpers/fsUtils');
 
+//Get route for retrieving note info
 noteRoute.get('/notes', (req, res) =>
   readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)))
 );
 
+//Post route for saving note
 noteRoute.post('/notes', (req, res) => {
-    // Destructuring assignment for the items in req.body
+
     const { title, text } = req.body;
-  
-    // If all the required properties are present
+
     if (title && text) {
-      // Variable for the object we will save
       const newNote = {
         title,
         text,
@@ -32,6 +32,7 @@ noteRoute.post('/notes', (req, res) => {
   }
 });
 
+//Delete route for removing notes
 noteRoute.delete("/notes/:id", (req, res) => {
     const id = req.params.id;
     readAndRemove(id, "./db/db.json");
